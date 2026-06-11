@@ -1,8 +1,16 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from "@testing-library/react";
+import App from "./App";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+jest.mock("./pages/Login", () => () => <div>Login Page</div>);
+jest.mock("./pages/ForgotPassword", () => () => <div>Forgot Password Page</div>);
+jest.mock("./pages/UserDashboard", () => () => <div>User Dashboard</div>);
+jest.mock("./pages/AdminDashboard", () => () => <div>Admin Dashboard</div>);
+jest.mock("./components/ProtectedRoute", () => ({ children }) => children);
+
+describe("App", () => {
+  test("renders login page", () => {
+    render(<App />);
+
+    expect(screen.getByText("Login Page")).toBeInTheDocument();
+  });
 });
