@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.app-bg {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* colorful gradient background */
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.card {
+  width: 420px;
+  padding: 25px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+h1 {
+  text-align: center;
+  color: #4a4a4a;
+  margin-bottom: 20px;
+}
+
+.balance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.balance-card {
+  background: linear-gradient(135deg, #ffecd2, #fcb69f);
+  padding: 10px;
+  border-radius: 12px;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+.balance-card p {
+  margin: 5px 0 0;
+  font-size: 16px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-weight: 600;
+  color: #555;
+}
+
+input, select {
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #7f5af0;
+}
+
+button {
+  margin-top: 10px;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+
+  color: white;
+  font-weight: bold;
+
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.receipt {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #d4fc79, #96e6a1);
+  text-align: center;
+}
+
+.error {
+  margin-top: 10px;
+  padding: 10px;
+  background: #ffe5e5;
+  color: #d8000c;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: bold;
+}
