@@ -1,0 +1,118 @@
+/* Background */
+.login-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  padding: 20px;
+}
+
+/* Card */
+.login-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+/* Header */
+.login-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.login-header h2 {
+  margin: 0;
+  color: #1e3a8a;
+}
+
+.login-header p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Form */
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form label {
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+/* Inputs */
+.login-form input {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.login-form input:focus {
+  border-color: #1e3a8a;
+  box-shadow: 0 0 5px rgba(30,58,138,0.3);
+}
+
+/* Button */
+.login-form button {
+  margin-top: 20px;
+  padding: 12px;
+  background: #1e3a8a;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-form button:hover {
+  background: #0f2557;
+}
+
+/* Forgot password */
+.forgot-link {
+  margin-top: 10px;
+  text-align: right;
+  font-size: 13px;
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.forgot-link:hover {
+  text-decoration: underline;
+}
+
+/* Messages */
+.error-msg {
+  margin-top: 15px;
+  color: red;
+  font-size: 14px;
+  text-align: center;
+}
+
+.success-msg {
+  margin-top: 15px;
+  color: green;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 480px) {
+  .login-card {
+    padding: 20px;
+  }
+
+  .login-header h2 {
+    font-size: 18px;
+  }
+}
