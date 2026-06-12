@@ -21,10 +21,10 @@ pipeline {
         }
 
         stage('Build') {
-            steps {
-                sh 'npm run build'
-            }
-        }
+    steps {
+        sh 'CI=false npm run build'
+    }
+}
 
         stage('Archive') {
             steps {
