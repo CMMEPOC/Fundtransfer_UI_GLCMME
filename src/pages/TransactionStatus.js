@@ -16,6 +16,9 @@ function TransactionStatus() {
     try {
       const response = await getTransactionDetails();
       setTransaction(response.data);
+      setTimeout(() => {
+        navigate("/user-dashboard");
+      }, 5000);
     } catch (error) {
       console.error(error);
     } finally {
@@ -64,6 +67,9 @@ function TransactionStatus() {
             {transaction.status}
           </span>
         </div>
+         <p className="redirect-msg">
+          Redirecting to Dashboard in 5 seconds...
+        </p> 
       </div>
     </div>
   );
