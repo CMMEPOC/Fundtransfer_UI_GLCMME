@@ -5,6 +5,7 @@ jest.mock("./pages/Login", () => () => <div>Login Page</div>);
 jest.mock("./pages/ForgotPassword", () => () => <div>Forgot Password Page</div>);
 jest.mock("./pages/UserDashboard", () => () => <div>User Dashboard</div>);
 jest.mock("./pages/AdminDashboard", () => () => <div>Admin Dashboard</div>);
+jest.mock("./pages/TransactionStatus", () => () => <div>Transaction Status</div>);
 jest.mock("./components/ProtectedRoute", () => ({ children }) => children);
 
 describe("App", () => {

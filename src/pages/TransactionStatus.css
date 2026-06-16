@@ -1,0 +1,39 @@
+.txn-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.txn-card {
+  width: 500px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ddd;
+  background: #fff;
+}
+
+.txn-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+
+.txn-row label {
+  font-weight: bold;
+}
+
+.success {
+  color: green;
+  font-weight: bold;
+}
+
+.failed {
+  color: red;
+  font-weight: bold;
+}
+
+.redirect-msg {
+  margin-top: 20px;
+  text-align: center;
+  color: #555;
+}

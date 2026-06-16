@@ -6,6 +6,7 @@ import ProtectedRoute from "./components/ProtectedRoute";
 import Dashboard from "./pages/Dashboard.js";
 import AdminDashboard from "./pages/AdminDashboard.js";
 import UserDashboard from "./pages/UserDashboard.js";
+import TransactionStatus from "./pages/TransactionStatus.js";
 
 
 function App() {
@@ -40,7 +41,10 @@ function App() {
             </ProtectedRoute>
           }
         />
-
+        <Route
+          path="/transaction-status"
+          element={<TransactionStatus />}
+        />
       </Routes>
 
     </BrowserRouter>
