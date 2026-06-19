@@ -1,10 +1,13 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./ForgotPassword.css";
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [loading, setLoading] = useState(false);
+
+  const navigate = useNavigate();
 
   const handleReset = () => {
     if (!email) {
@@ -14,7 +17,7 @@ function ForgotPassword() {
 
     setLoading(true);
 
-    // simulate API call
+    // Simulate API call
     setTimeout(() => {
       setLoading(false);
       setMessage("Password reset link sent to your email");
@@ -23,8 +26,15 @@ function ForgotPassword() {
 
   return (
     <div className="fp-page">
-
       <div className="fp-card">
+        
+        {/* Close Button */}
+        <button
+          className="close-btn"
+          onClick={() => navigate("/")}
+        >
+          ✖
+        </button>
 
         <h2>🔐 Forgot Password</h2>
 
@@ -46,9 +56,7 @@ function ForgotPassword() {
         {message && (
           <p className="message">{message}</p>
         )}
-
       </div>
-
     </div>
   );
 }

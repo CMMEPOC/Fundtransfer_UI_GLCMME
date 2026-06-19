@@ -22,9 +22,13 @@ function Login() {
       const response = await login(loginId, password);
       const data = response.data;
       localStorage.setItem("accessToken", data.accessToken);
-      localStorage.setItem("refreshToken", data.refreshToken);
-      localStorage.setItem("loginId", data.user.username);
-      localStorage.setItem("roles", JSON.stringify(data.user.roles));
+localStorage.setItem("refreshToken", data.refreshToken);
+
+localStorage.setItem("userId", data.user.id);
+localStorage.setItem("username", data.user.username);
+
+localStorage.setItem("loginId", data.user.username);
+localStorage.setItem("roles", JSON.stringify(data.user.roles));
 
       setMessage("Login successful");
         const roles = data.user.roles;
